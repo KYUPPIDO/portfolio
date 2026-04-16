@@ -1,0 +1,60 @@
+body {
+  text-align:center;
+  font-family: helvetica;
+  margin: 0;
+  padding: 1.5rem 1rem 2rem;
+  background: #f7f7f7;
+}
+.game-shell {
+  display: inline-block;
+  background: #ffffff;
+  padding: 1rem 1.25rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.game-header h3 {
+  margin: 0;
+}
+.game-button {
+  border: 1px solid #1b1b1b;
+  background: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.game-help {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: #555555;
+}
+.game-canvas {
+  border: 2px solid rgb(151, 149, 149);
+  display: block;
+  margin: 0 auto;
+}
+
+.game-shell:fullscreen,
+.game-shell:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 0;
+}
+
+.game-shell:fullscreen .game-canvas,
+.game-shell:-webkit-full-screen .game-canvas {
+  width: min(90vw, 900px);
+  height: auto;
+}

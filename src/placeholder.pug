@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Snake Game
+		link(rel="stylesheet", href="./style.css")
+	body
+		main.fake-content
+			h1 Snake Game
+			p
+				span Arrow keys, WASD, or ZQSD.
+				|  Quick break while I build more pages.
+			iframe(
+				src="../snake-game/dist/index.html"
+				title="Snake Game"
+				style="width: 100%; height: min(70vh, 640px); border: 2px solid #0b1a13; border-radius: 12px; background: #ffffff;"
+			)
+			p
+				a(href="./index.html") Back to home
