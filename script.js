@@ -5,9 +5,7 @@ const images = document.querySelectorAll(".bg");
 const headings = gsap.utils.toArray(".section-heading");
 const outerWrappers = gsap.utils.toArray(".outer");
 const innerWrappers = gsap.utils.toArray(".inner");
-const splitHeadings = headings.map((heading) =>
-  new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })
-);
+const splitHeadings = headings.map(splitHeading);
 let currentIndex = -1;
 const wrap = gsap.utils.wrap(0, sections.length);
 let animating;
@@ -77,6 +75,27 @@ function gotoSection(index, direction) {
     );
 
   currentIndex = targetIndex;
+}
+
+function splitHeading(heading) {
+  if (!heading || heading.dataset.split === "true") {
+    return heading ? Array.from(heading.querySelectorAll(".char")) : [];
+  }
+
+  heading.dataset.split = "true";
+  const text = heading.textContent || "";
+  heading.textContent = "";
+  const chars = [];
+
+  Array.from(text).forEach((char) => {
+    const span = document.createElement("span");
+    span.className = "char";
+    span.textContent = char === " " ? "\u00A0" : char;
+    heading.appendChild(span);
+    chars.push(span);
+  });
+
+  return chars;
 }
 
 let lastScrollTime = 0;
