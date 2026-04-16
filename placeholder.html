@@ -3,22 +3,106 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Valentin Bosson - CV</title>
+    <link rel="stylesheet" href="./cv.css" />
   </head>
   <body>
-    <main class="fake-content">
-      <h1>Snake Game</h1>
-      <p>
-        <span>Arrow keys, WASD, or ZQSD.</span>
-        Quick break while I build more pages.
-      </p>
-      <iframe
-        src="./snake-game/dist/index.html"
-        title="Snake Game"
-        style="width: 100%; height: min(70vh, 640px); border: 2px solid #0b1a13; border-radius: 12px; background: #ffffff;"
-      ></iframe>
-      <p><a href="./index.html">Back to home</a></p>
-    </main>
+    <div class="cv">
+      <aside class="cv__sidebar">
+        <div class="cv__photo">
+          <img src="./assets/profile.jpg" alt="Valentin Bosson" />
+        </div>
+        <h1 class="cv__name">Valentin Bosson</h1>
+        <p class="cv__role">Apprentice Web Developer</p>
+
+        <section class="cv__block">
+          <h2>Info</h2>
+          <ul>
+            <li>Born 04/12/2007</li>
+            <li>Rouen area</li>
+            <li>Looking for apprenticeship</li>
+            <li>Available immediately</li>
+          </ul>
+        </section>
+
+        <section class="cv__block">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>Web development basics</li>
+          </ul>
+        </section>
+
+        <section class="cv__block">
+          <h2>Personal</h2>
+          <ul>
+            <li>Curious</li>
+            <li>Autonomous</li>
+            <li>Persistent</li>
+            <li>Logical mindset</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="cv__main">
+        <section class="cv__block cv__lead">
+          <h2>Profile</h2>
+          <p>
+            Passionate about web development and currently training at Campus Zone01 in Rouen,
+            I am building my skills through hands-on projects. Curious and motivated, I am
+            looking for an apprenticeship to grow in a company environment.
+          </p>
+        </section>
+
+        <div class="cv__grid">
+          <section class="cv__block">
+            <h2>Education</h2>
+            <div class="cv__item">
+              <h3>Campus Zone01 - Rouen</h3>
+              <p>Web Development (ongoing)</p>
+            </div>
+            <div class="cv__item">
+              <h3>Lycee Grieu - Rouen</h3>
+              <p>Vocational High School in Cybersecurity (through Year 11)</p>
+            </div>
+          </section>
+
+          <section class="cv__block">
+            <h2>Projects</h2>
+            <div class="cv__item">
+              <h3>Personal Portfolio Website</h3>
+              <p>Created a site that presents my developer profile.</p>
+            </div>
+            <div class="cv__item">
+              <h3>To-Do List App</h3>
+              <p>Task management in JavaScript.</p>
+            </div>
+            <div class="cv__item">
+              <h3>Interactive Mini Game</h3>
+              <p>User interaction and game logic.</p>
+            </div>
+          </section>
+        </div>
+
+        <section class="cv__block">
+          <h2>Tools</h2>
+          <ul class="cv__inline">
+            <li>VS Code</li>
+            <li>Git (learning)</li>
+            <li>Browser DevTools</li>
+          </ul>
+        </section>
+
+        <section class="cv__block">
+          <h2>Objective</h2>
+          <p>
+            Join a company as an apprentice to develop my skills and contribute to real projects.
+          </p>
+        </section>
+
+        <p class="cv__back"><a href="./index.html">Back to home</a></p>
+      </main>
+    </div>
   </body>
 </html>
