@@ -28,7 +28,7 @@ function gotoSection(index, direction) {
   if (currentIndex >= 0) {
     gsap.set(sections[currentIndex], { zIndex: 0 });
     tl.to(
-      splitHeadings[currentIndex].chars,
+      splitHeadings[currentIndex],
       {
         autoAlpha: 0,
         yPercent: -35 * dFactor,
@@ -56,7 +56,7 @@ function gotoSection(index, direction) {
   )
     .fromTo(images[targetIndex], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
     .fromTo(
-      splitHeadings[targetIndex].chars,
+      splitHeadings[targetIndex],
       {
         autoAlpha: 0,
         yPercent: 150 * dFactor
