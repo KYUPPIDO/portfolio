@@ -1,5 +1,15 @@
 lang:                  en
-title:                 Hydejack
+title:                 Valentin Bosson
+description:           "Passionate Full Stack Development student."
+author:
+  name:                "Valentin Bosson"
+  email:               "bossonvalentin5@Gmail.com"
+  picture:             false
+  about:               "Full Stack Development Student"
+  social:
+    github:            KYUPPIDO
+    linkedin:          valentin-bosson-4363133a6
+
 copyright:             © 2024. All rights reserved.
 
 accent_image:          /assets/img/sidebar-bg.jpg
@@ -69,3 +79,11 @@ compress_html:
 
 sass:
   style:               compressed
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
