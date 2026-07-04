@@ -226,6 +226,7 @@ figcaption {
 .stratum:nth-child(3) { padding-left: 2rem; }
 .stratum:nth-child(4) { padding-left: 3rem; }
 .stratum:nth-child(5) { padding-left: 4rem; }
+.stratum:nth-child(6) { padding-left: 5rem; }
 .strata-note {
   font-family: var(--body); font-style: italic; font-size: .95rem;
   color: var(--bark); margin-top: 1.5rem;
@@ -260,7 +261,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content:
   .hero .plate-wrap { max-width: 480px; }
   .stratum { grid-template-columns: 1fr; gap: .35rem; }
   .stratum:nth-child(2), .stratum:nth-child(3),
-  .stratum:nth-child(4), .stratum:nth-child(5) { padding-left: 0; }
+  .stratum:nth-child(4), .stratum:nth-child(5),
+  .stratum:nth-child(6) { padding-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
