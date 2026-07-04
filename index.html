@@ -217,6 +217,101 @@
         </figure>
       </article>
 
+      <article class="project">
+        <h3>Forum</h3>
+        <p class="tags">go &middot; sqlite &middot; docker &middot; sessions &amp; cookies</p>
+        <p>
+          A discussion platform built from scratch in a small team:
+          registration and login, posts with images, comments, likes and
+          dislikes, category filters. Go on the server, <strong>SQLite
+          underneath</strong>, the whole thing shipped as a multi-stage
+          <strong>Docker</strong> build.
+        </p>
+        <p>
+          The part that taught me most is the authentication, hand-rolled
+          with UUID session cookies. Building a door people actually walk
+          through is where my cybersecurity background finally met my code.
+        </p>
+        <figure>
+          <div class="plate" role="img" aria-label="Hand-drawn sketch: a straw beehive on a ground line. One label points to the entrance, sessions checked at the door; another points to the body of the hive, posts, comments and votes stored in SQLite.">
+            <svg viewBox="0 0 520 250" aria-hidden="true">
+              <path class="ln" d="M20 210 C 100 206, 200 213, 300 209 C 380 206, 440 212, 500 208"/>
+              <path class="wash" d="M182 210 C 176 158, 196 106, 260 100 C 324 106, 344 158, 338 210 Z"/>
+              <path class="ln-thin" d="M184 182 C 214 175, 306 175, 336 182"/>
+              <path class="ln-thin" d="M189 152 C 217 144, 303 144, 331 152"/>
+              <path class="ln-thin" d="M199 124 C 224 116, 296 116, 321 124"/>
+              <path class="ln" d="M246 210 C 246 194, 274 194, 274 210"/>
+              <circle cx="260" cy="205" r="3.5" fill="var(--moss-deep)"/>
+              <path class="myc" d="M60 148 C 112 166, 172 190, 240 202"/>
+              <circle cx="56" cy="146" r="3" fill="var(--bark)"/>
+              <circle cx="170" cy="84" r="2" fill="var(--bark)"/>
+              <circle cx="352" cy="92" r="2" fill="var(--bark)"/>
+              <text class="fig-t strong" x="24" y="78">sessions &amp; cookies</text>
+              <text class="fig-t" x="24" y="94">checked at the door</text>
+              <path class="connector" d="M96 102 C 140 138, 190 174, 240 197"/>
+              <text class="fig-t strong" x="496" y="64" text-anchor="end">SQLite</text>
+              <text class="fig-t" x="496" y="80" text-anchor="end">posts &middot; comments &middot; votes</text>
+              <path class="connector" d="M420 88 C 392 100, 362 114, 336 128"/>
+            </svg>
+          </div>
+          <figcaption>Fig. 4 &middot; many cells inside, one guarded entrance.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <h3>Lem-in</h3>
+        <p class="tags">go &middot; graphs &middot; pathfinding &middot; file parsing</p>
+        <p>
+          A digital ant farm. The program parses a map of chambers and
+          tunnels, finds several shortest paths that <strong>share no
+          chamber</strong>, and distributes the colony across them so
+          everyone reaches the exit in as few turns as possible.
+        </p>
+        <p>
+          Under the hood: breadth-first searches under constraints, priority
+          queues from Go's heap package, and a distribution function that
+          decides which ant takes which road. Pure algorithms, no server in
+          sight.
+        </p>
+        <figure>
+          <div class="plate" role="img" aria-label="Hand-drawn sketch: a network of burrow chambers between a start and an end. Two dotted ant trails follow two paths that share no chamber; a middle chamber hangs off dashed links labeled explored, not chosen.">
+            <svg viewBox="0 0 520 250" aria-hidden="true">
+              <circle class="ln" cx="48" cy="125" r="11"/>
+              <circle class="ln" cx="472" cy="125" r="11"/>
+              <circle class="ln-thin" cx="160" cy="62" r="9"/>
+              <circle class="ln-thin" cx="265" cy="50" r="9"/>
+              <circle class="ln-thin" cx="372" cy="68" r="9"/>
+              <circle class="ln-thin" cx="160" cy="190" r="9"/>
+              <circle class="ln-thin" cx="265" cy="200" r="9"/>
+              <circle class="ln-thin" cx="372" cy="184" r="9"/>
+              <circle class="ln-thin" cx="265" cy="125" r="9"/>
+              <path class="ln-thin" d="M57 118 L 152 67"/>
+              <path class="ln-thin" d="M169 60 L 256 52"/>
+              <path class="ln-thin" d="M274 52 L 363 66"/>
+              <path class="ln-thin" d="M380 74 L 463 119"/>
+              <path class="ln-thin" d="M57 132 L 152 185"/>
+              <path class="ln-thin" d="M169 192 L 256 199"/>
+              <path class="ln-thin" d="M274 199 L 363 186"/>
+              <path class="ln-thin" d="M380 178 L 463 131"/>
+              <path class="connector" d="M167 69 L 259 118"/>
+              <path class="connector" d="M271 131 L 366 177"/>
+              <path class="myc" d="M52 112 C 100 78, 200 44, 265 42 C 330 44, 430 78, 468 112"/>
+              <path class="myc" d="M52 138 C 100 172, 200 208, 265 208 C 330 208, 430 172, 468 138"/>
+              <circle cx="122" cy="85" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="212" cy="52" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="330" cy="50" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="150" cy="176" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="305" cy="207" r="2.5" fill="var(--moss-deep)"/>
+              <text class="fig-t tiny soft" x="48" y="152" text-anchor="middle">start</text>
+              <text class="fig-t tiny soft" x="472" y="152" text-anchor="middle">end</text>
+              <text class="fig-t tiny soft" x="265" y="160" text-anchor="middle">explored, not chosen</text>
+              <text class="fig-t strong" x="496" y="28" text-anchor="end">two disjoint paths</text>
+            </svg>
+          </div>
+          <figcaption>Fig. 5 &middot; the colony splits across paths that share no chamber and crosses in fewer turns.</figcaption>
+        </figure>
+      </article>
+
       <p class="strata-note">More seedlings live on <a href="https://github.com/KYUPPIDO">my GitHub</a>.</p>
     </div>
   </section>
@@ -237,11 +332,11 @@
         </div>
         <div class="stratum">
           <span class="name">Understory<small>what does the work</small></span>
-          <span class="items"><b>Go</b>: web servers, REST APIs, routing, templating, tidy project structure.</span>
+          <span class="items"><b>Go</b>: web servers, REST APIs, routing, templating, tidy project structure. Python and Java on the side.</span>
         </div>
         <div class="stratum">
           <span class="name">Soil<small>what persists</small></span>
-          <span class="items"><b>SQL</b>: schema design, data modeling, queries that stay readable.</span>
+          <span class="items"><b>SQL &middot; SQLite &middot; MySQL</b>: schema design, data modeling, queries that stay readable.</span>
         </div>
         <div class="stratum">
           <span class="name">Mycelium<small>what connects</small></span>
@@ -249,7 +344,7 @@
         </div>
         <div class="stratum">
           <span class="name">Bedrock<small>always there</small></span>
-          <span class="items">Git &middot; Linux &middot; VS Code &middot; browser dev tools &middot; reading the docs before guessing.</span>
+          <span class="items">Git &middot; Linux &middot; Docker &middot; VS Code &middot; browser dev tools &middot; reading the docs before guessing.</span>
         </div>
       </div>
       <p class="strata-note">A forest only looks effortless above ground. Same for software.</p>
@@ -290,8 +385,8 @@
         <div class="entry">
           <p class="when">Off-screen</p>
           <p>
-            Happiest outdoors. Most of my stubborn bugs have been solved on a
-            walk, away from the keyboard.
+            Happiest outdoors; most of my stubborn bugs were solved on a walk,
+            away from the keyboard. When it rains: basketball and video games.
           </p>
         </div>
       </div>
@@ -308,9 +403,10 @@
       <p class="label">Contact</p>
       <h2>The gate is open.</h2>
       <p class="lede">
-        I'm looking for an <strong>alternance</strong> as a developer, in or
-        around Rouen. If your team needs someone who cares about the roots as
-        much as the canopy, write to me. I answer.
+        I'm looking for an <strong>alternance</strong> as a developer,
+        full-stack or security-leaning, in or around Rouen. I work in French
+        and English (B2). If your team needs someone who cares about the
+        roots as much as the canopy, write to me. I answer.
       </p>
       <div class="cta">
         <a class="btn primary" href="mailto:bossonvalentin5@gmail.com">bossonvalentin5@gmail.com</a>

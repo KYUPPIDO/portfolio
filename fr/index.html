@@ -220,6 +220,102 @@
         </figure>
       </article>
 
+      <article class="project">
+        <h3>Forum</h3>
+        <p class="tags">go &middot; sqlite &middot; docker &middot; sessions &amp; cookies</p>
+        <p>
+          Une plateforme de discussion construite de zéro en petite équipe :
+          inscription et connexion, posts avec images, commentaires, likes et
+          dislikes, filtres par catégorie. Du Go côté serveur, <strong>SQLite
+          en dessous</strong>, le tout livré dans une image
+          <strong>Docker</strong> multi-étapes.
+        </p>
+        <p>
+          La partie qui m'a le plus appris : l'authentification, faite à la
+          main avec des cookies de session en UUID. Construire une porte que
+          de vraies personnes franchissent, c'est là que mon bagage
+          cybersécurité a enfin rencontré mon code.
+        </p>
+        <figure>
+          <div class="plate" role="img" aria-label="Croquis dessiné à la main : une ruche de paille posée sur une ligne de sol. Une étiquette pointe vers l'entrée, sessions contrôlées à la porte ; une autre vers le corps de la ruche, posts, commentaires et votes rangés dans SQLite.">
+            <svg viewBox="0 0 520 250" aria-hidden="true">
+              <path class="ln" d="M20 210 C 100 206, 200 213, 300 209 C 380 206, 440 212, 500 208"/>
+              <path class="wash" d="M182 210 C 176 158, 196 106, 260 100 C 324 106, 344 158, 338 210 Z"/>
+              <path class="ln-thin" d="M184 182 C 214 175, 306 175, 336 182"/>
+              <path class="ln-thin" d="M189 152 C 217 144, 303 144, 331 152"/>
+              <path class="ln-thin" d="M199 124 C 224 116, 296 116, 321 124"/>
+              <path class="ln" d="M246 210 C 246 194, 274 194, 274 210"/>
+              <circle cx="260" cy="205" r="3.5" fill="var(--moss-deep)"/>
+              <path class="myc" d="M60 148 C 112 166, 172 190, 240 202"/>
+              <circle cx="56" cy="146" r="3" fill="var(--bark)"/>
+              <circle cx="170" cy="84" r="2" fill="var(--bark)"/>
+              <circle cx="352" cy="92" r="2" fill="var(--bark)"/>
+              <text class="fig-t strong" x="24" y="78">sessions &amp; cookies</text>
+              <text class="fig-t" x="24" y="94">contrôlées à l'entrée</text>
+              <path class="connector" d="M96 102 C 140 138, 190 174, 240 197"/>
+              <text class="fig-t strong" x="496" y="64" text-anchor="end">SQLite</text>
+              <text class="fig-t" x="496" y="80" text-anchor="end">posts &middot; commentaires &middot; votes</text>
+              <path class="connector" d="M420 88 C 392 100, 362 114, 336 128"/>
+            </svg>
+          </div>
+          <figcaption>Fig. 4 &middot; beaucoup d'alvéoles, une seule entrée gardée.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <h3>Lem-in</h3>
+        <p class="tags">go &middot; graphes &middot; pathfinding &middot; parsing de fichiers</p>
+        <p>
+          Une fourmilière numérique. Le programme analyse une carte de salles
+          et de tunnels, trouve plusieurs plus courts chemins qui <strong>ne
+          partagent aucune salle</strong>, puis répartit la colonie pour que
+          tout le monde atteigne la sortie en un minimum de tours.
+        </p>
+        <p>
+          Sous le capot : des parcours en largeur sous contraintes, des files
+          de priorité du package heap de Go, et une fonction de répartition
+          qui décide quelle fourmi prend quelle route. De l'algorithmique
+          pure, aucun serveur à l'horizon.
+        </p>
+        <figure>
+          <div class="plate" role="img" aria-label="Croquis dessiné à la main : un réseau de salles de fourmilière entre un départ et une arrivée. Deux pistes de fourmis en pointillés suivent deux chemins sans salle commune ; une salle centrale pend à des liens en tirets étiquetés exploré, pas choisi.">
+            <svg viewBox="0 0 520 250" aria-hidden="true">
+              <circle class="ln" cx="48" cy="125" r="11"/>
+              <circle class="ln" cx="472" cy="125" r="11"/>
+              <circle class="ln-thin" cx="160" cy="62" r="9"/>
+              <circle class="ln-thin" cx="265" cy="50" r="9"/>
+              <circle class="ln-thin" cx="372" cy="68" r="9"/>
+              <circle class="ln-thin" cx="160" cy="190" r="9"/>
+              <circle class="ln-thin" cx="265" cy="200" r="9"/>
+              <circle class="ln-thin" cx="372" cy="184" r="9"/>
+              <circle class="ln-thin" cx="265" cy="125" r="9"/>
+              <path class="ln-thin" d="M57 118 L 152 67"/>
+              <path class="ln-thin" d="M169 60 L 256 52"/>
+              <path class="ln-thin" d="M274 52 L 363 66"/>
+              <path class="ln-thin" d="M380 74 L 463 119"/>
+              <path class="ln-thin" d="M57 132 L 152 185"/>
+              <path class="ln-thin" d="M169 192 L 256 199"/>
+              <path class="ln-thin" d="M274 199 L 363 186"/>
+              <path class="ln-thin" d="M380 178 L 463 131"/>
+              <path class="connector" d="M167 69 L 259 118"/>
+              <path class="connector" d="M271 131 L 366 177"/>
+              <path class="myc" d="M52 112 C 100 78, 200 44, 265 42 C 330 44, 430 78, 468 112"/>
+              <path class="myc" d="M52 138 C 100 172, 200 208, 265 208 C 330 208, 430 172, 468 138"/>
+              <circle cx="122" cy="85" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="212" cy="52" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="330" cy="50" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="150" cy="176" r="2.5" fill="var(--moss-deep)"/>
+              <circle cx="305" cy="207" r="2.5" fill="var(--moss-deep)"/>
+              <text class="fig-t tiny soft" x="48" y="152" text-anchor="middle">départ</text>
+              <text class="fig-t tiny soft" x="472" y="152" text-anchor="middle">arrivée</text>
+              <text class="fig-t tiny soft" x="265" y="160" text-anchor="middle">exploré, pas choisi</text>
+              <text class="fig-t strong" x="496" y="28" text-anchor="end">deux chemins disjoints</text>
+            </svg>
+          </div>
+          <figcaption>Fig. 5 &middot; la colonie se répartit sur des chemins sans salle commune et traverse en moins de tours.</figcaption>
+        </figure>
+      </article>
+
       <p class="strata-note">D'autres semis poussent sur <a href="https://github.com/KYUPPIDO">mon GitHub</a>.</p>
     </div>
   </section>
@@ -240,11 +336,11 @@
         </div>
         <div class="stratum">
           <span class="name">Sous-bois<small>ce qui fait le travail</small></span>
-          <span class="items"><b>Go</b> : serveurs web, API REST, routage, templates, structure de projet soignée.</span>
+          <span class="items"><b>Go</b> : serveurs web, API REST, routage, templates, structure de projet soignée. Python et Java en appoint.</span>
         </div>
         <div class="stratum">
           <span class="name">Sol<small>ce qui persiste</small></span>
-          <span class="items"><b>SQL</b> : conception de schémas, modélisation de données, requêtes qui restent lisibles.</span>
+          <span class="items"><b>SQL &middot; SQLite &middot; MySQL</b> : conception de schémas, modélisation de données, requêtes qui restent lisibles.</span>
         </div>
         <div class="stratum">
           <span class="name">Mycélium<small>ce qui relie</small></span>
@@ -252,7 +348,7 @@
         </div>
         <div class="stratum">
           <span class="name">Roche mère<small>toujours là</small></span>
-          <span class="items">Git &middot; Linux &middot; VS Code &middot; outils du navigateur &middot; lire la doc avant de deviner.</span>
+          <span class="items">Git &middot; Linux &middot; Docker &middot; VS Code &middot; outils du navigateur &middot; lire la doc avant de deviner.</span>
         </div>
       </div>
       <p class="strata-note">Une forêt n'a l'air simple qu'au-dessus du sol. Le logiciel aussi.</p>
@@ -295,8 +391,9 @@
         <div class="entry">
           <p class="when">Hors écran</p>
           <p>
-            Plus heureux dehors. Mes bugs les plus têtus se sont souvent
-            résolus en marchant, loin du clavier.
+            Plus heureux dehors : mes bugs les plus têtus se sont souvent
+            résolus en marchant, loin du clavier. Quand il pleut : basket et
+            jeux vidéo.
           </p>
         </div>
       </div>
@@ -313,8 +410,9 @@
       <p class="label">Contact</p>
       <h2>La porte est ouverte.</h2>
       <p class="lede">
-        Je cherche une <strong>alternance</strong> de développeur, à Rouen ou
-        dans les environs. Si votre équipe a besoin de quelqu'un qui se soucie
+        Je cherche une <strong>alternance</strong> de développeur, full-stack
+        ou cyber, à Rouen ou dans les environs. Je travaille en français et en
+        anglais (B2). Si votre équipe a besoin de quelqu'un qui se soucie
         autant des racines que de la canopée, écrivez-moi. Je réponds.
       </p>
       <div class="cta">
